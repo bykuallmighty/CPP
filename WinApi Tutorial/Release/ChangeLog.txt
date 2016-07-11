@@ -1,0 +1,20 @@
+15.02.16 - v 1.07
+- poprawnie numeruje pliki w folderach do backupu
+
+02.02.16 - v 1.06
+- zapytania o potwierdzenie po dluzszym dzialaniu programu
+
+BLEDY:
+- na dysku sieciowym nie wykrywa gdy dany plik juz znajduje sie w TP01
+
+
+01.09.15 - V 1.05
+- brak sprawdzania katalogów WR1, WR2 gdy ma kopiowaæ tylko do TP01
+- sprawdzanie czy w plikach inv nie ma niedozwolonych znaków
+- sprawdzanie czy nazwa pliku INV ma dok³adnie 6 znakow
+- sprawdzenie czy w TP01 nie powtarza siê plik, wyœwietla komunikat i
+przerywa import
+- dodano autora ^^
+
+31.08.15 - V 1.0
+- release

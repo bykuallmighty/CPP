@@ -1,0 +1,66 @@
+Inwentaryzacja Backup
+
+1. Opis
+2. Dzia³anie
+3. Obs³uga
+4. Uwagi
+
+
+
+1. Opis
+
+	Program kopiuje plik z "RD" - miejsca odczytu, poczym, w zale¿noœci od ustawieñ, 
+kopiuje do WR1, WR2 oraz miejsca docelowego TP01.
+Dla plików inwentaryzacyjnych INV0XX(gdzie XX numer skanera), mo¿na uruchomiæ sprawdzanie
+poprawnoœci pliku.
+
+
+2. Dzia³anie
+
+	Opcje:
+- rz¹danie potwierdzenia - przed skopiowaniem, rz¹da potwierdzenia(duh)
+- sprawdzanie poprawnoœci - sprawdza poprawnoœæ plików inwentaryzacyjnych pod wzglêdem:
+	- czy na pocz¹tku znajduje siê M
+	- czy iloœæ rekordów zgadza siê z liczb¹ kontroln¹
+	- czy poza M znajduj¹ siê same cyfry
+	- czy d³ugoœæ linii jest poprawna
+- kopiuj do TP01 - có¿... rozszyfrujcie to sami.
+
+	W momencie kopiowania plików do folderów w których maj¹ siê znajdowaæ pliki zapasowe,
+sprawdza iloœæ plików w danych folderach(WR1, WR2), wybiera najwy¿szy wynik, poczym dodaje 
+na pocz¹tku nazwy nowego pliku liczbê równ¹ liczbie plików w folderze +1, 
+ma to na celu zabezpieczenie przed nadpisaniem pliku o tej samej nazwie.
+	Sprawdza czy w TP01 znajduje siê plik o nazwie takiej samej jak plik kopiowany,
+przerywa kopiowanie je¿eli tak, na chwilê obecn¹ dzia³a tylko dla folderów lokalnych
+
+Program zapisuje zawartoœæ skopiowanych plików wraz z czasem do osobnego pliku "historia.txt"
+który zostaje automatycznie utworzony w miejscu pliku wykonywalnego.
+
+3. Obs³uga
+
+	Uruchamiamy program:
+	Inw BCK.exe
+	- ustawiamy poprawne œcie¿ki - wykrywa gdy œcie¿ka jest niepoprawna, przyk³ad:
+	d:\NAUKA\Jezyk C++\APPLICATIONS\WinApi Tutorial\TESTY\source\
+	- ustawiamy jakie pliki ma braæ pod uwage, przyk³ad:
+	.DAT lub DAT lub INV0
+	- ustawiamy jakie pliki pomin¹æ(rodzielamy ';'):
+	INV000; INV0000; INV666;
+	- klikamy start
+	- usuwamy system32
+
+4. Uwagi
+	Program dzia³a gdy WR1 i WR2 jest przyasygnowane do dysków sieciowych, JEDNAK¯E 
+	je¿eli sieæ dzia³a wolno to potrafi siê zawiesiæ, dlatego te¿ zalecam u¿ywaæ folderów
+	WR1 i WR2 znajduj¹cych siê na dysku lokalnym.
+
+
+
+
+
+
+
+
+
+
+Je¿eli usun¹³eœ w tym momencie system32 to powinieneœ odejœæ od komputera i ju¿ NIGDY do niego nie wracaæ...
